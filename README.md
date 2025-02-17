@@ -1,4 +1,7 @@
 # BioContactMap
+![coverage](https://img.shields.io/badge/coverage-100%green)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+
 BioContactMap is a Python package designed for calculating distance and contact maps from protein structure data. It computes the distances between the centers of mass of each residue in a provided PDB file and generates both a distance matrix and a binary contact map.
 
 ## Features
