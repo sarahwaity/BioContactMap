@@ -9,7 +9,7 @@ import seaborn as sns
 #package specific inputs
 from .helpers import find_distance, find_center
 
-def distance_and_contact_map(pdb,local = False, threshold):
+def distance_and_contact_map(pdb, threshold,local = False):
     """
     Calculates the distances between the center of masses of each residue in the supplied PDB file. 
 
