@@ -9,7 +9,7 @@ import seaborn as sns
 #package specific inputs
 from .helpers import find_distance, find_center
 
-def distance_and_contact_map(pdb,threshold):
+def distance_and_contact_map(pdb,local = False, threshold):
     """
     Calculates the distances between the center of masses of each residue in the supplied PDB file. 
 
@@ -24,9 +24,11 @@ def distance_and_contact_map(pdb,threshold):
         fig: distance map plotted in seaborn, units = angstroms
         fig_thresh: contact map plotted in seaborn, units = arbitary 
     """
-
-    #import pdb file
-    ppdb  = PandasPdb().fetch_pdb(pdb)
+    if local == True: 
+        ppdb = PandasPdb().read_pdb(pdb)
+    else:
+        #import pdb file
+        ppdb  = PandasPdb().fetch_pdb(pdb)
 
     #generate empty lists to write to in loop
     residue_list = []
