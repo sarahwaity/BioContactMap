@@ -44,7 +44,7 @@ def distance_and_contact_map(pdb, threshold,local = False):
 
         #find the center of mass of the residue using find_center.py
         #IMPORTANT: this considers the backbone as well as the sidechain
-        x,y,z = find_center(inner_df['x_coord'],inner_df['y_coord'],inner_df['z_coord'])
+        x,y,z = find_center(inner_df['x_coord'],inner_df['y_coord'],inner_df['z_coord'], inner_df['element_symbol'])
 
         #append to list for downstream saving
         residue_list.append(residue)
